@@ -1,0 +1,379 @@
+<!doctype html> <html lang="en">
+
+        <head>
+                <meta charset="utf-8">
+
+                <title>Harder, Better, Faster: Case Studies in Reproducible Workflows</title>
+
+                <meta name="description" content="
+                ">
+                <meta name="author" content="Dr. Kathryn Huff">
+
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+                <link rel="stylesheet" href="css/reveal.min.css">
+                <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+                <!-- For syntax highlighting -->
+                <link rel="stylesheet" href="lib/css/zenburn.css">
+
+                <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+                <script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+                </script>
+
+                <!--[if lt IE 9]>
+                        <script src="lib/js/html5shiv.js"></script>
+                <![endif]-->
+        </head>
+
+        <body>
+
+                <div class="reveal">
+
+                        <!-- Any section element inside of this container is displayed as a slide -->
+                        <div class="slides">
+				<section>
+                                        <h2>Lessons Learned</h2>
+                                        <h3>The Practice of Reproducible Research</h3> 
+                                        <br/>
+                                        <h3>Kathryn Huff</h3>
+                                        <h3>Sutardja Dai Hall</h3>
+                                        <h3>Jan. 27, 2017</h3>
+                                </section>
+                                <section>
+                                        <section>
+                                                <span class="fragment">
+                                                        <a
+                                                      href="http://uchicago.edu"
+                                                      class="image"><img
+                                                      height="300"
+                                                      src="http://geosci.uchicago.edu/~kite/university.seal.rgb.maroon.jpg"
+                                                      alt="Physics, University of Chicago"></a>
+                                                </span>
+                                                <span class="fragment">
+                                                        <a
+                                                      href="https://engr.wisc.edu/ep.html"
+                                                      class="image"><img
+                                                      height="300"
+                                                      src="https://biochem.wisc.edu/sites/default/files/intranet/medialab/clipart/UW_crest.gif"
+                                                      alt="Nuclear Engineering and Engineering Physics, University of Wisconsin - Madison"></a>
+                                                </span>
+                                                <span class="fragment">
+                                                        <a
+                                                      href="http://nuc.berkeley.edu"
+                                                      class="image"><img
+                                                      height="300"
+                                                      src="http://www.berkeley.edu/brand/img/seals/ucbseal_139_540.png"
+                                                      alt="Nuclear Engineering, University of California, Berkeley"></a>
+                                                </span>
+                                                <span class="fragment">
+                                                        <a
+                                                      href="http://npre.illinois.edu"
+                                                      class="image"><img
+                                                      height="300"
+                                                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/UIUC_seal.svg/480px-UIUC_seal.svg.png"
+                                                      alt="Nuclear, Plasma, and Radiological Engineering, University of Illinois, Urbana-Champaign"></a>
+                                                </span>
+                                        </section>
+                                        <section>
+                                                <h3></h3>
+                                        </section>
+                                        <section data-background="./images/book_stock_pexels.jpg" data-background-size="cover">
+                                        </section>
+                                        <section data-background="./images/book_stock_pexels.jpg" data-background-size="cover" style="background: rgba(255, 255, 255, 0.95);">
+                                                <ul style="list-style-type: none">
+                                                        <li 
+                                                                class="fragment">''Reading 
+                                                                brings us 
+                                                                unknown 
+                                                                friends'' 
+                                                                - Honore de 
+                                                                Balzac</li>
+                                                </ul>
+                                        </section>
+                                </section>
+                                <section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                        </section>
+                                        <section data-background="./images/repro_conf.jpg" data-transition="none" data-background-size="cover" style="background: rgba(255, 255, 255, 0.95);" data-markdown>
+- Preface (Stark)
+- Introduction (Kitzes) 
+- Assessing the Reproducibility of a Research Project (Rokem, Marwick, Staneva) 
+- The Basic Reproducible Workflow Template (Kitzes, Turek) 
+- Introducing the Case Studies (Imamoglu, Turek)
+- PART 1: High-Level Case Studies
+- PART 2: Low-Level Case Studies 
+- Lessons Learned (Huff et al.)
+- Supporting Reproducible Science (Ram, Marwick)
+- Glossary of Terms and Techniques (Rokem, Chirigati)
+</section>
+				</section>
+                                <section>
+                                        <section>
+                                                        <a href="http://bids.berkeley.edu"
+                                                           class="image"><img
+                                                           height="400"
+                                                           src="./images/domains.png"
+                                                           alt="tools"> 
+                                                          </a>
+                                        </section>
+<section data-markdown>
+<script type="text/template">
+## Progress
+- **Title:** The Practice of Reproducible Research
+- **Publisher:** UC Press
+- **June, 2015 - February, 2016:** Collected 34 [case studies](https://github.com/BIDS/repro-case-studies/blob/master/case-studies/dturek.pdf) from scientists
+- **May 1, 2016:** Drafts of supplementary chapters complete
+- **May 15, 2016:**  Friendly Reviews Complete
+- **June 1, 2016:** Draft Manuscript Submitted
+- **Early 2017**: Published
+</script>
+</section>
+</section>
+<section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                                <h3>Lessons Learned</h3>
+                                                <ul>
+                                                        <li>Pain Points</li>
+                                                        <li>Recommmendations from the Authors</li>
+                                                        <li>A Little Data</li>
+                                                        <li>Needs</li>
+                                                </ul>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+<h2>Pain Points</h2>
+<ul>
+<li class="fragment">People and Skills</li>
+<li class="fragment">Dependencies, Build Systems, and Packaging</li>
+<li class="fragment">Hardware Access</li>
+<li class="fragment">Testing</li>
+<li class="fragment">Publishing</li>
+<li class="fragment">Data Versioning</li>
+<li class="fragment">Time and Incentives</li>
+<li class="fragment">Data restrictions</li>
+</ul>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                                <h3>Incentives</h3>
+                                                <ul>
+                                                        <li>verifiability</li>
+                                                        <li>collaboration</li>
+                                                        <li>efficiency</li>
+                                                        <li>extensibility</li>
+                                                        <li>"focus on science"</li>
+                                                        <li>"forced planning"</li>
+                                                        <li>"safety for evolution"</li>
+                                                </ul>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                                <h3>Recommendations</h3>
+                                                <ul>
+                                                <li>version control your code</li>
+                                                <li>open your data</li>
+                                                        <li>automate everywhere possible</li>
+                                                                <li>document your processes</li>
+                                                                        <li>test everything</li>
+<li>use free and open tools</li>
+                                                </ul>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                                <h3>Recommendations: Continued</h3>
+                                                <ul>
+<li>avoid excessive dependencies</li>
+<li>when dependencies can't be avoided, package their installation</li>
+<li>host code on a collaborative platform (e.g. GitHub)</li>
+<li>get a Digital Object Identifier for your data and code</li>
+<li>avoid spreadsheets, plain text data is preferred ("timeless," even)</li>
+<li>explicitly set pseudorandom number generator seeds</li>
+<li>workflow and provenance frameworks may be too clunky for most scientists</li>
+                                                </ul>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+                                                <h3>Recommendations: Outliers</h3>
+<blockquote>
+... in our estimation, if someone 
+was to try to reproduce our research it would probably be more 
+natural for them to write their own scripts as this has the 
+additional benefit that they might not fall into any error 
+we may have accidentally introduced in our scripts.
+</blockquote>
+                                        </section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png" data-background-size="cover">
+					</section>
+				        <section data-background="https://bids.berkeley.edu/sites/default/files/bids_dots_and_lines_overlay.png"  data-transition="none" data-background-size="cover">
+## Recommendations: Outliers
+> Scientific funding and the number of scientists available to do the work is finite.  Therefore not every scientific result can, or should be reproduced.
+
+                                        </section>
+                                        <section>
+                                                        <a href="http://bids.berkeley.edu"
+                                                           class="image"><img
+                                                           height="400"
+                                                           src="./images/tools.png"
+                                                           alt="tools"> 
+                                                          </a>
+                                        </section>
+                                        <section>
+                                                        <a href="http://bids.berkeley.edu"
+                                                           class="image"><img
+                                                           height="400"
+                                                           src="./images/languages.png"
+                                                           alt="languagess"> 
+                                                          </a>
+                                        </section>
+                                        <section>
+                                                        <a href="http://bids.berkeley.edu"
+                                                           class="image"><img
+                                                           height="400"
+                                                           src="./images/testing.png"
+                                                           alt="testing"></a>
+                                        </section>
+                                        <section>
+<h2>Emergent Needs</h2>
+<small>
+<ul>
+<li>Better education of scientists in more reproducibility-robust tools.</li>
+<li>Widely used tools should be more reproducible so that the common denominator tool does not undermine reproducibility.</li>
+<li>Improved configuration and build systems for portably packaging software, data, and analysis workflows.</li>
+<li>Reproducibility at scale for high performance computing.</li>
+<li>Standardized hardware configurations and experimental procedures for limited-availability experimental apparatuses.</li>
+<li>Better understanding of why researchers don't respond to the delayed incentives of unit testing as a practice.</li>
+<li>Greater adoption of unit testing irrespective of programming language.</li>
+<li>Broader community adoption around publication formats that allow parallel editing (i.e. any plain text markup language that can be version</li>
+<li>Greater scientific adoption of new industry-led tools and platforms for data storage, versioning, and management.</li>
+<li>Increased community recognition of the benefits of reproducibility.</li>
+<li>Incentive systems where reproducibility is not self-incentivizing.</li>
+<li>Standards around scrubbed and representational data so that analysis can be investigated separate from restricted data sets.</li>
+<li>Community adoption for file format standards within some domains.</li>
+<li>Domain standards which translate well outside of their own scientific communities.</li>
+</ul>
+</small>
+                                        </section>
+                                </section>
+                                <section>
+                                        <section>
+                                                <h2>Social Science Volume</h2>
+<h4>Collecting Case Studies Spring/Summer 2016</h4>
+<ul>
+<li>Same format: 1,500-2,000 words plus one diagram</li>
+<li>Bad Hessian blog : http://www.badhessian.org</li>
+<li>GitHub Repo : http://github.com/BIDS/ss-repro-case-public</li>
+<li>Email Garret Christensen (garret@berkeley.edu) or Cyrus Dioun (dioun@berkeley.edu)</li>
+</ul>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Acknowledgements</h2>
+                                                <p>
+                                                <ul>
+                                                        <li>BIDS</li>
+                                                        <li>Justin Kitzes</li>
+                                                        <li>Fatma Imamoglu</li>
+                                                        <li>Daniel Turek</li>
+                                                        <li>Chapter Authors</li>
+                                                        <li>Case Study Authors</li>
+                                                        <li>Reproducibility Working Group</li>
+                                                </ul>
+                                                <br/>
+                                                <span class="fragment">
+                                                        <a href="http://bids.berkeley.edu"
+                                                           class="image"><img
+                                                           width="25%"
+                                                           src="http://bids.berkeley.edu/sites/all/themes/bids/logo.png"
+                                                           alt="BIDS Logo"></a>
+                                                </span>
+                                        </section>
+                                </section>
+                                <section>
+                                        <h1>THE END</h1>
+                                        <h3><a
+                                                           href="https://katyhuff.github.io">Katy Huff</a> </h3>
+                                        <a href="https://katyhuff.github.io/2016-05-03-nyu">katyhuff.github.io/2016-05-03-nyu</a>
+
+                                        <br/>
+                                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                                                         alt="Creative Commons License" style="border-width:0"
+                                                                                        src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+                                                                                        xmlns:dct="http://purl.org/dc/terms/" 
+                                                                                        property="dct:title">Harder, 
+                                                Better, Faster: Case Studies in 
+                                                Reproducible Workflows</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://katyhuff.github.io" property="cc:attributionName" rel="cc:attributionURL">Kathryn Huff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://katyhuff.github.io/2016-05-03-nyu" rel="dct:source">http://katyhuff.github.io/2016-05-03-nyu</a>.
+                                </section>
+<section data-markdown>
+> 'connectome workbench', 'stata', 'zotero', ' ', 'travisci', 'vistrails',
+> 'osf', 'testtools', 'nipy', 'coverage/coveralls', 'ferret', 'cmake',
+> 'flickr api', 'amazon s3', 'nose', 'readthedocs', 'pypi', 'jira',
+> 'jenkins', 'ec2 s3', 'sweave', 'shell', ' jupyter', 'sql', 'dataverse',
+> 'rnw', 'spark', ' paraview', 'data science toolkit', 'overleaf',
+> 'virtualenv', 'crossref', 'spyder', 'markdown', 'dropbox',
+> 'scikit-image', 'awk', 'netcdf', 'petsc', 'figshare', 'sharelatex',
+> 'pandoc', 'ibamr', 'dcvs', 'twitter api', 'mendeley', 'word', 'd3',
+> 'beautiful soup', 'sed', 'devtools', 'activepapers', 'private git repo',
+> 'cython', 'outreg2', 'rsync', ' zenodo', 'vagrant', 'c'
+></section>
+
+                        </div>
+
+                </div>
+
+                <script src="lib/js/head.min.js"></script>
+                <script src="js/reveal.min.js"></script>
+
+                <script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/math/math.js', async: true }
+        ]
+});
+
+                </script>
+
+        </body>
+</html>
